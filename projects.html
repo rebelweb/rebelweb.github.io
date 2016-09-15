@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<div class="projects">
+  <h1 class="page-heading">Projects</h1>
+
+  <ul class="post-list">
+    {% for project in site.projects %}
+      <li>
+        <a href="{{ project.url | prepend: site.baseurl }}" class="project-link">{{ project.title | escape }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

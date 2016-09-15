@@ -1,15 +1,18 @@
 ---
 layout: page
-title: About
+title: About Me
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+My name is Ryan Condron and I am the lead Ruby on Rails developer at
+System Development Services, Inc. in Effingham, Illinois. My day to day tasks
+include helping other developers grow their Ruby on Rails experience,
+developing and shipping a web application to manage servicing of ATM and
+amusement machines, and managing our in house gitlab server.
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jekyll" %} /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+### My Experience
+- Ruby on Rails (3 1/2 years)
+- Linux (4 years)
+- PHP/MySQL (5 years off and on)
+- Chef Omnibus (6 months)
+- Git (2 years)

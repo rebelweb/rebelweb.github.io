@@ -8,6 +8,26 @@ $spacing-unit: 30px !default;
 @import "syntax";
 @import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
 
+.navbar-home {
+  background-color: transparent;
+  background: transparent;
+  border-color: transparent;
+  .navbar-header {
+    .navbar-brand {
+      color: #fff;
+    }
+  }
+  .container-fluid {
+    .navbar-right {
+      ul {
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
 html {
   padding: 0px;
   min-height: 100%;

@@ -1,28 +1,4 @@
-{% assign custom_url = site.url | append: site.baseurl %}
-{% assign full_base_url = site.github.url | default: custom_url %}
-
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a href="{{ '/' | prepend: full_base_url }}" class="navbar-brand">{{ site.title }}</a>
-      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-toggle="#top-menu">
-        <span class="sr-only">Toggle Navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-    <div class="collapse navbar-collapse navbar-right" id="top-menu">
-      <ul class="nav navbar-nav">
-        {% for my_page in site.pages %}
-          {% if my_page.title %}
-            <li><a href="{{ my_page.url | prepend: full_base_url }}">{{ my_page.title | escape }}</a></li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </div>
-  </div>
-</nav>
+{% include navbar.html %}
 
 <div class="container">
   <h1 class="page-heading">Ryan Condron</h1>

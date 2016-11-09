@@ -6,12 +6,14 @@ $spacing-unit: 30px !default;
 @charset "utf-8";
 @import "bootstrap";
 @import "syntax";
+@import "font-awesome";
 @import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
 
 .navbar-home {
   background-color: transparent;
   background: transparent;
   border-color: transparent;
+  border-bottom: 1px solid #fff;
   .navbar-header {
     .navbar-brand {
       color: #fff;
@@ -67,4 +69,17 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.fa-3 {
+  font-size: 2.75em;
+}
+
+.social-icons {
+  text-align: center;
+}
+
+.social-icon, .social-icon:active, .social-icon:visited, .social-icon:hover {
+  color: #fff;
+  margin: .25em;
 }

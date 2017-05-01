@@ -5,6 +5,7 @@ description: > # this means to ignore newlines until "baseurl:"
   I am an experienced web developer with a focus on Ruby on Rails and Linux.
 twitter_username: rebelwebdev
 github_username:  rebelweb
+timezone: America/Chicago
 
 development:
     url: "https://rebelweb.github.io" # the base hostname & protocol for your site

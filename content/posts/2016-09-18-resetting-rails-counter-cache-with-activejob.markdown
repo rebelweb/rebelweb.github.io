@@ -1,12 +1,7 @@
 ---
-layout: post
 title:  "Resetting Rails Counter Cache with Active Job"
 date:   2016-09-18 12:30:00 -0500
-categories: rails
-description: >
-  Resetting counter cache columns using Rails ActiveJob, to allow the reset to
-  be called from within the app and provide concurrency when having to update
-  the cache count columns manually.
+draft: false
 ---
 
 I have recently tried something a little different, when working with Rails
@@ -32,13 +27,13 @@ relationships that need updated. It is structured with the class name in snake
 case as the key, and the value of an array of all the relationships needing
 updated. See the example below.
 
-{% highlight json %}
+```json
 {
   "category": [
     "article_categories"
   ]
 }
-{% endhighlight %}
+```
 
 Now for the job code (see below). The job accepts one parameter which is the
 key. The key is the key from the JSON file discussed earlier so you can do all
@@ -52,7 +47,7 @@ For the actual business end of things the __update_cache_columns__ method does
 the brunt of the work. The method takes the key and turns it into a class_name,
 and updates each one of it's cache columns.
 
-{% highlight ruby %}
+```ruby
   class UpdateCounterCacheJob < ApplicationJob
     attr_accessor :cache_columns
 
@@ -80,13 +75,13 @@ and updates each one of it's cache columns.
       end
     end
   end
-{% endhighlight %}
+```
 
 Testing this is easy. First, we'll create the related object and update
 the count via raw SQL. Then we'll finally run the job and verify it updated the
 count successfully.
 
-{% highlight ruby %}
+```ruby
   RSpec.describe UpdateCounterCachesJob, type: :job do
     it 'updates all cache columns when they are out of sync' do
       sql = <<-SQL
@@ -118,7 +113,7 @@ count successfully.
       expect(category.articles_count).to eq(0)
     end
   end
-{% endhighlight %}
+```
 
 I am including my base model code, to help any one see how a counter cache is
 setup. The category relation on ArticleCategory contains
@@ -126,7 +121,7 @@ __counter_cache: :articles_count__, which is what typically updates the column
 in the category table every time one is created or destroyed. The job above is
 for when the counts are wrong due to something going a rye.
 
-{% highlight ruby %}
+```ruby
   class Category < ApplicationRecord
     has_many :article_categories, class_name: ArticleCategory,
                                   foreign_key: :category_id, dependent: :destroy
@@ -147,7 +142,7 @@ for when the counts are wrong due to something going a rye.
     belongs_to :category, class_name: Category, foreign_key: :category_id,
                           counter_cache: :articles_count
   end
-{% endhighlight %}
+```
 
 This is a different spin on how this is typically handled. I welcome any
 thoughts on this implementation.

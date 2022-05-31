@@ -1,11 +1,7 @@
 ---
-layout: post
 title:  "Updating Time Rounder"
 date:   2016-10-21 18:05:00 -0500
-categories: open-source
-description: >
-  Time Rounder is a ruby plugin to round time using logic and schedules,
-  not using complex math.
+draft: false
 ---
 It has been awhile since I have touched the time_rounder gem. When I left off, I
 only implemented the 15 minute schedule. I have recently started work on that

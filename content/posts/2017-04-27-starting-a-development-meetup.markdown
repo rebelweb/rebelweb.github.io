@@ -1,10 +1,7 @@
 ---
-layout: post
 title: Starting a Development Meetup
 date: 2017-04-27 1:00 -500
-categories: meetup giving-back
-description: >
-  Details about an upcoming development meetup in Effingham, Illinois
+draft: false
 ---
 
 After traveling back and forth to St. Louis to go to developer meetups, another

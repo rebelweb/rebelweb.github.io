@@ -2,10 +2,7 @@
 layout: post
 title:  "Attending Globalhack VI"
 date:   2016-10-21 16:30:00 -0500
-categories: hackathon
-description: >
-  Globalhack 2016 is hacking to end homelessness. Let's see what we can
-  accomplish.
+draft: false
 ---
 
 A couple co workers and myself registered for this hackathon to end homelessness
